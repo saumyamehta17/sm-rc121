@@ -1,0 +1,10 @@
+<h3>Project for Letter  <%= @letter.char %></h3>
+<p><%= link_to "Select letter", letter_index_path %></p>
+
+<% if @letter.projects.present? %>
+	<% @letter.projects.each do |pro| %>  
+		<%= link_to  pro.name , pro %><br/>
+	<% end %>
+<% else %>
+    <h4>No match Found</h4>
+<% end %>
